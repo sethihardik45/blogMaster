@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog - BlogMaster</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="create-container">
+      <header>
+        <h1>Create</h1>
+      </header>
+      <div class="home-nav">
+        <a href="/" class="home">Home</a>
+      </div>
+      <main>
+        <div class="container">
+          <form
+            action="/create"
+            method="POST"
+            enctype="multipart/form-data"
+            class="create-form"
+          >
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required />
+            <label for="content">Content</label>
+            <textarea id="content" name="content" required></textarea>
+            <label for="image">Image</label>
+            <input type="file" id="image" name="image" />
+            <button type="submit" class="create-button">Create</button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

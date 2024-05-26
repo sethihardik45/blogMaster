@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogMaster</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <header>
+          <h1>BlogMaster</h1>
+        </header>
+        <ul class="nav no-search">
+          <li><a href="/">Home</a></li>
+          <li><a href="/create">Create Blog</a></li>
+        </ul>
+      </div>
+      <main>
+
+
+
+        <div class="blog-container container">
+          <% blogs.forEach(blog => { %>
+          <div class="blog">
+            <% if (blog.image) { %>
+            <img src="/uploads/<%= blog.image %>" alt="<%= blog.title %>" />
+            <% } %>
+            <div class="blog-post">
+              <h2 class="blog-title"><%= blog.title %></h2>
+              <p class="blog-content"><%= blog.content %></p>
+            </div>
+            <div class="actions">
+              <a href="/edit/<%= blog.id %>" class="edit">Edit</a>
+              <form
+                action="/delete/<%= blog.id %>"
+                method="POST"
+                style="display: inline"
+              >
+                <button type="submit" class="delete">Delete</button>
+              </form>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </main>
+      <footer>
+        Made with ❤️ by Hardik
+      </footer>
+    </div>
+
+    <script src="/script.js"></script>
+    <script>
+      document
+        .getElementById("mobile-menu")
+        .addEventListener("click", function () {
+          document.querySelector("nav ul").classList.toggle("show");
+        });
+    </script>
+  </body>
+</html>

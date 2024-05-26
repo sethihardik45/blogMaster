@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  background-color: #f3ca8f;
+}
+
+.container {
+  background-color: white;
+  min-height: 53vh;
+  height: fit-content;
+  box-sizing: border-box;
+  width: 80%;
+  margin: auto;
+}
+header {
+  background-image: url("https://i.ibb.co/G0Bgj4Z/board.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 20vh;
+  margin-top: 0px;
+}
+
+header > h1 {
+  font-family: "Notable", sans-serif;
+  font-size: 5vh;
+  text-align: center;
+  margin-top: 5vh;
+  color: white;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav ul li {
+  border: 3px solid #4d2d24;
+  background-color: #885633;
+  padding: 1.5vh;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+a,
+a:active,
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-family: "Notable", sans-serif;
+}
+
+.container::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #885633;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #4d2d24;
+  outline: 1px solid black;
+}
+
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.blog > img {
+  height: 20vh;
+  width: fit-content;
+  aspect-ratio: auto;
+}
+
+.edit,
+.delete {
+  border: 3px solid #4d2d24;
+  background-color: #885633;
+  padding: 1.5vh;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: white;
+  margin: 13px 0px;
+  font-family: "Notable", sans-serif;
+  cursor: pointer;
+}
+
+.blog-title {
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 1vh;
+}
+
+.blog-content {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+  }
+  .blog{
+    text-align: justify;
+    padding: 3vh;
+  }
+  .blog>img {
+    margin: auto auto;
+  }
+  
+  .create-container {
+    padding: 3vh;
+  }
+}
+
+
+
+
+
+
+.create-container {
+  background-color: white;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+}
+
+.home {
+  border: 3px solid #4d2d24;
+  background-color: #885633;
+  padding: 1.5vh;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.home-nav {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 1vh 0vh;
+  font-weight: 700;
+  font-size: 1.3rem;
+  
+}
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: 1rem;
+  width: 80%;
+  padding: 0px 0.7vw;
+}
+
+textarea {
+  height: 35vh;
+  width: 80%;
+  padding: 0.7vw;
+}
+
+.create-container::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.create-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #885633;
+}
+
+.create-container::-webkit-scrollbar-thumb {
+  background-color: #4d2d24;
+  outline: 1px solid black;
+}
+
+.create-button {
+  border: 3px solid #4d2d24;
+  background-color: #885633;
+  padding: 1.5vh;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2vh;
+  width: 25%;
+  color: white;
+  font-family: "Notable", sans-serif;
+}
+
+.blog-container {
+  overflow-y: hidden;
+}
+
+main {
+  padding-bottom: 6vh;
+}
+
+footer {
+  color: black;
+  text-align: center;
+  margin: 5vh auto;
+  font-weight: 800;
+  font-family: "Roboto Condensed", sans-serif;
+}
