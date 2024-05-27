@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 const upload = multer({ dest: 'public/uploads/' }); // Updated to serve images from the public directory
@@ -53,6 +54,7 @@ app.post('/delete/:id', (req, res) => {
     res.redirect('/');
 });
 
-app.listen(3000, () => {
-    console.log('BlogMaster is running on port 3000');
+
+app.listen(PORT, () => {
+    console.log(`BlogMaster is running on port ${PORT}`);
 });
